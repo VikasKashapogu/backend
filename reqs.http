@@ -1,0 +1,43 @@
+get http://localhost:4000/user-api/users
+
+###
+get http://localhost:4000/user-api/users/3
+
+###
+post http://localhost:4000/user-api/user
+Content-Type: application/json
+
+{
+    "username":"vikas",
+    "password":"vikas",
+    "gmail":"vikas@gmail.com"
+}
+
+###
+post http://localhost:4000/user-api/user-login
+Content-Type: application/json
+
+{
+    "username":"vikas",
+    "password":"vikas"
+    
+}
+
+###
+put http://localhost:4000/user-api/user
+Content-Type: application/json
+
+{
+    "id":3,
+    "name":"babu"
+}
+
+###
+delete http://localhost:4000/user-api/user/2
+
+###
+get http://localhost:4000/product-api/products
+
+###
+get http://localhost:4000/user-api/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpa2FzIiwiaWF0IjoxNzA4MzI0ODA2LCJleHAiOjE3MDg0MTEyMDZ9.r7NgyckkXGQ87TOvP8kKF4Wl9B2_Rvx0zmzY-orTymc
